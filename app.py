@@ -22,7 +22,7 @@ import streamlit as st
 # Gunakan path relatif agar kompatibel dengan Streamlit Cloud.
 # Jangan gunakan path absolut seperti /content/... atau C:/Users/...
 # ──────────────────────────────────────────────
-MODEL_PATH = Path(__file__).parent / "model_orange.pickle"
+MODEL_PATH = Path(__file__).parent / "tree_house.pickle"
 
 # ──────────────────────────────────────────────
 # KONFIGURASI FITUR
@@ -85,7 +85,7 @@ def load_model():
     if not MODEL_PATH.exists():
         return None, (
             f"File model tidak ditemukan: `{MODEL_PATH}`\n\n"
-            "Pastikan file `model_orange.pickle` sudah di-upload ke "
+            "Pastikan file `tree_house.pickle` sudah di-upload ke "
             "GitHub repository yang sama dengan `app.py`."
         )
     try:
